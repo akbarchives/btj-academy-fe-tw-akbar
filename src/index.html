@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <script src="jquery.min.js"></script>
+    <script src="main.js" async></script>
+  </head>
+  <body class="flex items-center justify-center bg-primary sm:p-24">
+    <div class="container bg-white sm:rounded-3xl">
+      <!-- Navbar -->
+      <nav class="flex items-center justify-between p-10">
+        <div class="flex items-center gap-3">
+          <img src="assets/hero.avif" alt="" id="brandImage" class="w-24" />
+          <p class="text-3xl">Welcome</p>
+        </div>
+        <ul class="flex gap-3">
+          <li>
+            <a href="index.html">
+              <button
+                class="rounded-lg border bg-secondary px-4 py-2 text-white transition hover:translate-y-[-5px] hover:transition"
+              >
+                Home
+              </button></a
+            >
+          </li>
+          <li>
+            <a href="about.html">
+              <button
+                class="rounded-lg border px-4 py-2 transition hover:translate-y-[-5px] hover:transition"
+              >
+                About
+              </button></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- Main -->
+      <main
+        class="flex flex-col items-center justify-center gap-8 px-10 py-5 sm:flex-row sm:px-24 sm:py-10"
+      >
+        <form
+          action=""
+          onsubmit="validateForm(event)"
+          class="bg-third w-[400px] rounded-2xl border p-8"
+        >
+          <p class="pb-2 text-2xl font-medium">Welcome to our landing page</p>
+          <p class="pb-8 text-lg font-normal">
+            Please login to access other features
+          </p>
+          <label class="my-1 block font-medium" for="username"
+            >Username :</label
+          >
+          <input
+            class="mt-1 w-full rounded-lg p-2"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your username"
+            onkeyup="usernameValidation()"
+          />
+          <p id="usernameError" class="text-sm text-red-600">
+            Please fill username
+          </p>
+          <label class="mt-1 block font-medium" for="password"
+            >Password :</label
+          >
+          <input
+            class="my-1 w-full rounded-lg p-2"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+            onkeyup="passwordValidation()"
+          />
+          <p id="passwordError" class="text-sm text-red-600">
+            Please fill password
+          </p>
+
+          <div class="my-1">
+            <input type="checkbox" name="showPassword" id="showPassword" />
+            <label for="showPassword" class="font-medium">Show password</label>
+          </div>
+          <p id="capsLockWarning" class="invisible text-sm text-yellow-500">
+            Capslock is ON
+          </p>
+
+          <button
+            id="submitForm"
+            class="my-1 w-full rounded-lg bg-secondary p-2 font-medium text-white transition hover:translate-y-[-5px] hover:transition"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+        <div class="flex flex-col items-center justify-center">
+          <img src="assets/hero.avif" alt="" width="200px" />
+          <p class="text-center font-medium">
+            "The biggest adventure you can take is to live the life of your
+            dreams" - Oprah Winfrey
+          </p>
+        </div>
+      </main>
+      <!-- footer -->
+      <footer class="bg-secondary sm:rounded-b-2xl">
+        <p class="p-4 text-center font-medium text-white">
+          © 2023 BTJ Academy
+        </p>
+      </footer>
+    </div>
+    <button
+      id="changeTheme"
+      class="bg-third fixed bottom-8 right-8 rounded-3xl border-2 border-white px-4 py-2 font-medium text-black transition hover:translate-y-[-5px]"
+    >
+      Change Theme
+    </button>
+  </body>
+</html>
